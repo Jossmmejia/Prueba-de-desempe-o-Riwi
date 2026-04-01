@@ -1,4 +1,4 @@
-from files import *
+from filesclean import *
 
 def show_memu():
     print("\n----FILES ----")
@@ -13,9 +13,9 @@ def show_memu():
 
 def give_datas():
     name = input("Get it the name: ")
-    age =  int(input("Get it the age: "))
+    age =  input("Get it the age: ")
     status = input("Get it the status (active or unactive): ")
-    ID = int(input("Get it ID: "))
+    ID = input("Get it ID: ")
     course = input("Get it the course: ")
 
     return{
@@ -45,7 +45,7 @@ if __name__== "__main__":
             registers = read_registers_json()
             print("\n---- Registers found it ----")
             if not registers:
-                print("It has not resgisters.")
+                print("There has not resgisters.")
             else:
                 for r in registers:
                     print(r)
@@ -58,7 +58,7 @@ if __name__== "__main__":
                 print("\nRegister found it:")
                 print(register)
             else:
-                print("Register not foun it")
+                print("Register son not found it")
         
         
 
@@ -73,10 +73,10 @@ if __name__== "__main__":
                 print("Register has been updated.")
 
             else:
-                print("Data do not find it ")
+                print("Data do not found it ")
 
         elif option == "5":
-            id_vaule = input("Get it the ID the register: ")
+            id_vaule = input("Enter the ID the register: ")
             
             deleted = delete_register_json(id_vaule, "ID")
 
@@ -84,7 +84,7 @@ if __name__== "__main__":
                 print("Register has been deleted.")
 
             else:
-                print("Data do not find it ")
+                print("Data do not found it ")
 
         elif option =="6":
             export_for_csv()
